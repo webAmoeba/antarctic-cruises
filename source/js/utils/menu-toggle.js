@@ -1,6 +1,7 @@
 const mainHeader = document.querySelector('.main-header');
 const menuToggler = document.querySelector('.main-header__menu-toggle');
 const navigatorMenu = document.querySelector('.main-header__nav');
+const menu = document.querySelector('.main-header__first-line');
 
 mainHeader.classList.add('main-header__navigation--hidden');
 
@@ -8,6 +9,8 @@ menuToggler.classList.add('main-header__menu-toggle--with-js');
 
 navigatorMenu.classList.add('main-header__nav--mobile-hidden');
 
+menu.classList.add('main-header__first-line--hidden');
+menu.classList.add('main-header__first-line--moving');
 
 menuToggler.addEventListener('click', () => {
   if (navigatorMenu.classList.contains('main-header__nav--mobile-hidden')) {

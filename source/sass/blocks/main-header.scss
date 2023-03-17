@@ -196,7 +196,7 @@
   height: 53px;
   border: none;
   background-color: transparent;
-  z-index: 1;
+  z-index: 2;
 
   &::before {
     position: absolute;
@@ -259,12 +259,21 @@
       position: absolute;
       margin: 0;
       top: 0;
-      left: 36px;
+      left: 100%;
       min-height: 100vh;
       width: calc(100vw - 36px);
 
       background-color: $color-default-white;
       color: $color-default-black;
+
+      &--hidden {
+        transition: 0.7s;
+        transform: translate(calc(100% + 36px));
+      }
+
+      &--moving {
+        transform: translate(-100%);
+      }
 
       &::after {
         position: absolute;
