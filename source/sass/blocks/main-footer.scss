@@ -1,0 +1,136 @@
+.main-footer {
+  background-color: $color-default-black;
+  color: $color-default-white;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  @include vp-1023 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+
+.main-footer__main-grid {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 40px;
+  padding-top: 50px;
+  padding-bottom: 45px;
+
+  @include vp-1023 {
+    grid-template-columns: 80% 20%;
+    gap: unset;
+    padding-bottom: 40px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-top: 40px;
+    padding-bottom: 28px;
+  }
+}
+
+.main-footer__first-column {
+  display: flex;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.main-footer__main-logo-link {
+  margin-right: 40px;
+  line-height: 0;
+  align-self: start;
+
+  @include vp-1023 {
+    margin-right: 25px;
+  }
+
+  @include vp-767 {
+    align-self: start;
+  }
+}
+
+.main-footer__main-logo-svg {
+  @include vp-1023 {
+    width: 38px;
+    height: 20px;
+  }
+
+  @include vp-767 {
+    width: 42px;
+    height: 22px;
+  }
+}
+
+.main-footer__nav-links {
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px;
+
+  @include vp-1023 {
+    gap: 23px;
+    margin-top: -3px;
+  }
+
+  @include vp-767 {
+    margin-top: 22px;
+    display: grid;
+    gap: 7px;
+  }
+}
+
+.main-footer__nav-link {
+  padding: 5px 0;
+}
+
+.main-footer__social-links {
+  margin-right: -10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  justify-content: end;
+
+  @include vp-1023 {
+    margin-top: -10px;
+    gap: 4px;
+  }
+
+  @include vp-767 {
+    justify-content: start;
+    margin: 0;
+    margin-left: -10px;
+  }
+}
+
+.main-footer__social-link {
+  padding: 0 10px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include vp-1023 {
+    padding: 0 8px;
+  }
+
+  @include vp-767 {
+    padding: 8px;
+  }
+}
+
+.main-footer__social-icon-svg {
+  @include vp-1023 {
+    height: 16px;
+  }
+}
