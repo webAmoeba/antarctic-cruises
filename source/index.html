@@ -160,8 +160,8 @@
                     srcset="img/content/cards/odissey.webp 1x, img/content/cards/odissey@2x.webp 2x">
                   <source media="(min-width: 320px)"
                     srcset="img/content/cards/odissey.jpg 1x, img/content/cards/odissey@2x.jpg 2x">
-                  <img class="upcoming-cruises__img" src="img/content/cards/odissey.jpg" alt="Фото Антарктики." width="260"
-                    height="386">
+                  <img class="upcoming-cruises__img" src="img/content/cards/odissey.jpg" alt="Фото Антарктики."
+                    width="260" height="386">
                 </picture>
               </div>
             </li>
@@ -317,6 +317,67 @@
             </li>
           </ul>
         </section>
+      </div>
+
+      <div class="early-booking">
+        <div class="container">
+          <section class="early-booking__section">
+            <div class="early-booking__text">
+              <h2>Раннее бронирование</h2>
+              <p>
+                Забронируйте тур <br> за&nbsp;3-6 месяцев
+                до&nbsp;даты&nbsp;выезда и&nbsp;сэкономьте&nbsp;до&nbsp;50%
+              </p>
+            </div>
+
+            <div class="early-booking__form" data-tabs="element">
+              <div data-form-validate="data-form-validate" data-callback="base">
+                <fieldset>
+                  <legend>
+                    Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время
+                  </legend>
+                  <form action="https://echo.htmlacademy.ru" method="post">
+                    <div class="custom-input" data-validate-type="text" data-limitation="name"
+                      data-message-base="Поле обязательно к заполнению"
+                      data-message-extra="Проверьте корректность заполнения поля" data-required="data-required">
+                      <label>
+                        <span class="visually-hidden">Введите ваше имя</span>
+                        <input type="text" name="user-name-1" placeholder="Имя" />
+                      </label>
+                    </div>
+                    <div class="custom-input" data-validate-type="phone" data-on-input-validate="data-on-input-validate"
+                      data-message-base="Поле обязательно к заполнению"
+                      data-message-extra="Проверьте корректность заполнения поля" data-required="data-required">
+                      <label>
+                        <span class="visually-hidden">Введите ваш телефон</span>
+                        <input type="tel" name="user-phone" placeholder="Телефон" />
+                      </label>
+                    </div>
+                    <div class="custom-input" data-validate-type="email"
+                      data-message-base="Поле обязательно к заполнению" data-required="data-required">
+                      <label>
+                        <span class="visually-hidden">Введите ваш email</span>
+                        <input type="email" name="user-email" placeholder="Email" />
+                      </label>
+                    </div>
+                    <div class="custom-toggle " data-validate-type="checkbox"
+                      data-message-base="Чтобы оставить заявку, нужно согласиться на обработку данных">
+                      <label class="early-booking__custom">
+                        <input type="checkbox" value="user-agreement-1" name="user-agreement" />
+                        <span class="early-booking__custom-checkbox"></span>
+                        <span>
+                          Я согласен на обработку
+                          моих&nbsp;персональных данных
+                        </span>
+                      </label>
+                    </div>
+                    <button class="" type="submit">Оставить звявку</button>
+                </fieldset>
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
 
     </main>

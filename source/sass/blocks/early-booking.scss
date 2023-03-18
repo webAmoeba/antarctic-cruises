@@ -1,0 +1,214 @@
+.early-booking {
+  background-color: rgba(0, 140, 255, 0.7);
+  background-size: cover;
+  background-position: bottom;
+  background-image: image-set(
+    url("../img/backgrounds/booking/booking@2x.webp") 2x,
+    url("../img/backgrounds/booking/booking.webp") 1x,
+    url("../img/backgrounds/booking/booking@2x.jpg") 2x,
+    url("../img/backgrounds/booking/booking.jpg") 1x,
+  );
+
+  @include vp-1023 {
+    background-image: image-set(
+      url("../img/backgrounds/booking/booking-tablet@2x.webp") 2x,
+      url("../img/backgrounds/booking/booking-tablet.webp") 1x,
+      url("../img/backgrounds/booking/booking-tablet@2x.jpg") 2x,
+      url("../img/backgrounds/booking/booking-tablet.jpg") 1x,
+    );
+    background-position: center;
+  }
+
+  @include vp-767 {
+    background-image: image-set(
+      url("../img/backgrounds/booking/booking-mobile@2x.webp") 2x,
+      url("../img/backgrounds/booking/booking-mobile.webp") 1x,
+      url("../img/backgrounds/booking/booking-mobile@2x.jpg") 2x,
+      url("../img/backgrounds/booking/booking-mobile.jpg") 1x,
+    );
+  }
+}
+
+.early-booking__section {
+  display: grid;
+  grid-template-columns: 1fr 403px;
+  gap: 30px;
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px 0;
+  align-items: center;
+
+  @include vp-1023 {
+    display: flex;
+    flex-direction: column;
+    padding: 84px 0;
+    padding-bottom: 100px;
+    gap: 42px;
+  }
+
+  @include vp-767 {
+    padding: 55px 0;
+    padding-bottom: 100px;
+    gap: 23px;
+  }
+}
+
+.early-booking__text {
+  @include vp-1023 {
+    text-align: center;
+  }
+
+  h2 {
+    margin: 8px 0;
+    margin-top: 4px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 150%;
+
+    @include vp-1023 {
+      font-size: 34px;
+      margin-bottom: 5px;
+    }
+
+    @include vp-767 {
+      font-size: 24px;
+      line-height: 130%;
+      margin-bottom: 14px;
+    }
+  }
+
+  p {
+    margin: 10px 0;
+    margin-top: 6px;
+    font-size: 18px;
+    line-height: 150%;
+    max-width: 360px;
+
+    br {
+      display: none;
+    }
+
+    @include vp-1023 {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5px;
+    }
+
+    @include vp-767 {
+      margin-top: 14px;
+      max-width: 260px;
+      font-size: 16px;
+      line-height: 140%;
+
+      br {
+        display: block;
+      }
+    }
+  }
+}
+
+.early-booking__form {
+  padding: 50px;
+  padding-top: 44px;
+  background-color: $color-default-black;
+  color: $color-default-white;
+  box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+
+  @include vp-1023 {
+    margin-left: 137px;
+    margin-right: 137px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    padding: 35px 30px 40px;
+  }
+
+  fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  legend {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+
+    @include vp-767 {
+      line-height: 140%;
+      text-align: center;
+    }
+  }
+
+  form {
+    margin-top: 27px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  label {
+    font-size: 10px;
+    line-height: 130%;
+    min-height: 18px;
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 11px 16px;
+    border: none;
+    font-family: inherit;
+    background-color: $color-default-white;
+    color: $color-default-black;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+
+    @include vp-767 {
+      margin-top: 7px;
+    }
+  }
+}
+
+.custom-input {
+  label {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+}
+
+.early-booking__custom {
+  display: flex;
+  align-items: center;
+
+  input[type="checkbox"] {
+    appearance: none;
+
+    &:checked + .early-booking__custom-checkbox {
+      background-image: url("../img/svg/mark.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  @include vp-767 {
+    margin-top: -3px;
+  }
+}
+
+.early-booking__custom-checkbox {
+  margin-right: 5px;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  background-color: $color-default-white;
+
+  @include vp-767 {
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+  }
+}
