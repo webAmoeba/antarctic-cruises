@@ -51,6 +51,8 @@
   line-height: 0;
   align-self: start;
 
+  @include behavior;
+
   @include vp-1023 {
     margin-right: 25px;
   }
@@ -92,6 +94,8 @@
 
 .main-footer__nav-link {
   padding: 5px 0;
+
+  @include behavior;
 }
 
 .main-footer__social-links {
@@ -119,6 +123,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include behavior;
 
   @include vp-1023 {
     padding: 0 8px;

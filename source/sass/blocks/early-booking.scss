@@ -166,6 +166,8 @@
     font-size: 14px;
     line-height: 150%;
 
+    @include behavior;
+
     @include vp-767 {
       margin-top: 7px;
     }
@@ -183,6 +185,21 @@
 .early-booking__custom {
   display: flex;
   align-items: center;
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:focus-within {
+    outline: none;
+    box-shadow:
+      0 0 0 4px $color-default-black,
+      0 0 0 6px $color-arctic-blue;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   input[type="checkbox"] {
     appearance: none;

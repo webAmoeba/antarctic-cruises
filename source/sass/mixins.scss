@@ -116,3 +116,30 @@
 
 // не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие
 // этим вы усложняете работу команды, проверку вашего кода и будущую поддержку проекта
+
+// ---------------------------------
+
+@mixin behavior(
+    $opacity-hover: 0.6,
+    $opacity-active: 0.3,
+    $first-shadow-behavior: $color-arctic-blue,
+    $second-shadow-behavior: $color-default-black,
+  ) {
+  &:hover {
+    opacity: $opacity-hover;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow:
+      // 0 0 0 6px $first-shadow-behavior,
+      // 0 0 0 6px $second-shadow-behavior;
+
+      0 0 0 4px $second-shadow-behavior,
+      0 0 0 6px $first-shadow-behavior;
+  }
+
+  &:active {
+    opacity: $opacity-active;
+  }
+}

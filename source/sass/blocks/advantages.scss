@@ -1,21 +1,34 @@
 .advantages {
   padding: 87px 0 120px;
   background-color: rgba(0, 153, 255, 0.2);
-  background-image: url("../img/backgrounds/advantages/sky.jpg");
   background-size: cover;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/backgrounds/advantages/sky@2x.jpg");
-  }
+  background-image: image-set(
+    url("../img/backgrounds/advantages/sky@2x.webp") 2x,
+    url("../img/backgrounds/advantages/sky.webp") 1x,
+    url("../img/backgrounds/advantages/sky@2x.jpg") 2x,
+    url("../img/backgrounds/advantages/sky.jpg") 1x,
+  );
 
   @include vp-1023 {
     padding-top: 69px;
     padding-bottom: 100px;
+    background-image: image-set(
+      url("../img/backgrounds/advantages/sky-tablet@2x.webp") 2x,
+      url("../img/backgrounds/advantages/sky-tablet.webp") 1x,
+      url("../img/backgrounds/advantages/sky-tablet@2x.jpg") 2x,
+      url("../img/backgrounds/advantages/sky-tablet.jpg") 1x,
+    );
   }
 
   @include vp-767 {
     padding-top: 37px;
     padding-bottom: 66px;
+    background-image: image-set(
+      url("../img/backgrounds/advantages/sky-mobile@2x.webp") 2x,
+      url("../img/backgrounds/advantages/sky-mobile.webp") 1x,
+      url("../img/backgrounds/advantages/sky-mobile@2x.jpg") 2x,
+      url("../img/backgrounds/advantages/sky-mobile.jpg") 1x,
+    );
   }
 }
 

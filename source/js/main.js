@@ -3,7 +3,6 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import './utils/menu-toggle';
 import './utils/yandex-map';
-import './utils/yandex-map-ver3';
 
 // ---------------------------------
 

@@ -8,6 +8,8 @@
     line-height: 150%;
     font-family: inherit;
     color: $color-default-black;
+
+    @include behavior(1, 1);
   }
 
   // можно добавить цвет бордера или аутлайна,

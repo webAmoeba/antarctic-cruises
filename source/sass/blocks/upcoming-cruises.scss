@@ -55,6 +55,8 @@
   justify-content: end;
   gap: 0;
 
+  @include behavior(1, 1);
+
   &:hover,
   &:focus-within {
     .upcoming-cruises__cruise-description {
@@ -141,6 +143,9 @@
   line-height: 150%;
   background-color: $color-default-white;
   color: $color-default-black;
+  user-select: none;
+
+  @include behavior;
 }
 
 .upcoming-cruises__background-color {
