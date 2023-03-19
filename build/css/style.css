@@ -1901,6 +1901,9 @@ button,
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   gap: 30px;
   color: #f9fbfd;
 }
@@ -1914,16 +1917,13 @@ button,
   position: relative;
   min-height: 386px;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
   gap: 0;
 }
 .upcoming-cruises__item:hover {
@@ -1948,7 +1948,6 @@ button,
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  height: 100%;
 }
 .upcoming-cruises__item:hover h3, .upcoming-cruises__item:focus-within h3 {
   -ms-flex-item-align: stretch;
@@ -1975,6 +1974,9 @@ button,
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
 }
 @media (max-width: 1023px) {
   .upcoming-cruises__item h3 {
@@ -2241,6 +2243,7 @@ button,
   font-size: 10px;
   line-height: 130%;
   min-height: 18px;
+  cursor: pointer;
 }
 .early-booking__form button {
   margin-top: 10px;
