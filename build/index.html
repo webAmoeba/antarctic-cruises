@@ -15,7 +15,7 @@
 </head>
 <body>
   <div class="wrapper">
-    <header class="main-header ">
+    <header class="main-header">
       <div class="container">
         <button class="main-header__menu-toggle main-header__menu-toggle--wihtout-js">
           <span class="visually-hidden">Раскрыть главное меню.</span>
@@ -349,7 +349,7 @@
                       data-message-extra="Проверьте корректность заполнения поля" data-required="data-required">
                       <label>
                         <span class="visually-hidden">Введите ваше имя</span>
-                        <input type="text" name="user-name-1" placeholder="Имя" />
+                        <input type="text" name="user-name-1" placeholder="Имя" required/>
                       </label>
                     </div>
                     <div class="custom-input" data-validate-type="phone" data-on-input-validate="data-on-input-validate"
@@ -357,20 +357,20 @@
                       data-message-extra="Проверьте корректность заполнения поля" data-required="data-required">
                       <label>
                         <span class="visually-hidden">Введите ваш телефон</span>
-                        <input type="tel" name="user-phone" placeholder="Телефон" />
+                        <input type="tel" name="user-phone" placeholder="Телефон" required/>
                       </label>
                     </div>
                     <div class="custom-input" data-validate-type="email"
                       data-message-base="Поле обязательно к заполнению" data-required="data-required">
                       <label>
                         <span class="visually-hidden">Введите ваш email</span>
-                        <input type="email" name="user-email" placeholder="Email" />
+                        <input type="email" name="user-email" placeholder="Email" required/>
                       </label>
                     </div>
                     <div class="custom-toggle " data-validate-type="checkbox"
                       data-message-base="Чтобы оставить заявку, нужно согласиться на обработку данных">
                       <label class="early-booking__custom">
-                        <input type="checkbox" value="user-agreement-1" name="user-agreement" />
+                        <input type="checkbox" value="user-agreement-1" name="user-agreement" required/>
                         <span class="early-booking__custom-checkbox"></span>
                         <span>
                           Я согласен на обработку
@@ -378,7 +378,7 @@
                         </span>
                       </label>
                     </div>
-                    <button class="" type="submit">Оставить звявку</button>
+                    <button type="submit">Оставить звявку</button>
                 </form>
 
               </div>
