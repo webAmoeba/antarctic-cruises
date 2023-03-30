@@ -1904,7 +1904,7 @@ button,
 .upcoming-cruises__item {
   position: relative;
   min-height: 386px;
-  overflow: hidden;
+  overflow: scroll;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -1914,6 +1914,7 @@ button,
           justify-content: stretch;
   gap: 0;
   height: 386px;
+  background-color: #008cff;
 }
 .upcoming-cruises__item:hover {
   opacity: 1;
@@ -1940,6 +1941,7 @@ button,
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+  z-index: 1;
 }
 .upcoming-cruises__item:hover h3, .upcoming-cruises__item:focus-within h3 {
   -ms-flex-item-align: stretch;
@@ -1969,6 +1971,7 @@ button,
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
+  z-index: 3;
 }
 @media (max-width: 1023px) {
   .upcoming-cruises__item h3 {
@@ -2057,7 +2060,6 @@ button,
   top: 0;
   left: 0;
   background-color: rgba(0, 140, 255, 0.7);
-  z-index: -1;
 }
 
 .upcoming-cruises__img {

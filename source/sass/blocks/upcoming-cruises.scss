@@ -56,12 +56,13 @@
 .upcoming-cruises__item {
   position: relative;
   min-height: 386px;
-  overflow: hidden;
+  overflow: scroll;
   display: grid;
   grid-template-columns: 1fr;
   justify-content: stretch;
   gap: 0;
   height: 386px;
+  background-color: $color-arctic-blue;
 
   @include behavior(1, 1);
 
@@ -73,6 +74,7 @@
       display: flex;
       flex-direction: column;
       justify-content: end;
+      z-index: 1;
     }
 
     h3 {
@@ -99,6 +101,7 @@
   font-size: 18px;
   line-height: 150%;
   align-self: end;
+  z-index: 3;
 
   @include vp-1023 {
     padding: 27px 35px;
@@ -165,7 +168,6 @@
   top: 0;
   left: 0;
   background-color: rgba(0, 140, 255, 0.7);
-  z-index: -1;
 }
 
 .upcoming-cruises__img {
