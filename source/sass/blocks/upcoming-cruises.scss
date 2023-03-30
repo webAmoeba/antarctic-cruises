@@ -56,7 +56,7 @@
 .upcoming-cruises__item {
   position: relative;
   min-height: 386px;
-  overflow: scroll;
+  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr;
   justify-content: stretch;
@@ -68,7 +68,7 @@
 
   &:hover,
   &:focus-within {
-    overflow: scroll;
+    overflow: auto;
 
     .upcoming-cruises__cruise-description {
       display: flex;

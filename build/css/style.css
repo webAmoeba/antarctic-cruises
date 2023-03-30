@@ -1904,7 +1904,7 @@ button,
 .upcoming-cruises__item {
   position: relative;
   min-height: 386px;
-  overflow: scroll;
+  overflow: hidden;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -1928,7 +1928,7 @@ button,
   opacity: 1;
 }
 .upcoming-cruises__item:hover, .upcoming-cruises__item:focus-within {
-  overflow: scroll;
+  overflow: auto;
 }
 .upcoming-cruises__item:hover .upcoming-cruises__cruise-description, .upcoming-cruises__item:focus-within .upcoming-cruises__cruise-description {
   display: -webkit-box;
