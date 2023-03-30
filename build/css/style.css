@@ -2469,6 +2469,8 @@ button,
 @media (max-width: 767px) {
   .contacts__contacts a {
     margin-top: 20px;
+    -ms-grid-column-align: stretch;
+        justify-self: stretch;
   }
 }
 
