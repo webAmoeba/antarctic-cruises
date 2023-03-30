@@ -73,42 +73,6 @@
   padding: 30px 30px 38px;
   background-color: $color-default-white;
 
-  &--mod1 {
-    & p {
-      max-width: 288px;
-    }
-  }
-
-  &--mod2 {
-    & p {
-      max-width: 280px;
-    }
-  }
-
-  &--mod3 {
-    & p {
-      max-width: 280px;
-
-      @include vp-1023 {
-        margin-top: 20px;
-      }
-
-      @include vp-767 {
-        margin-top: unset;
-      }
-    }
-  }
-
-  &--mod1,
-  &--mod2,
-  &--mod3 {
-    p {
-      @include vp-767 {
-        max-width: unset;
-      }
-    }
-  }
-
   @include vp-1023 {
     padding: 26px 15px 16px 20px;
   }

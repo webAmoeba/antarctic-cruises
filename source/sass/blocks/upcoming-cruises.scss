@@ -37,13 +37,19 @@
   padding: 0;
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, 260px);
+  justify-content: center;
   align-items: start;
   gap: 30px;
   color: $color-default-white;
 
+  @include vp-1023 {
+    grid-template-columns: repeat(auto-fit, 309px);
+  }
+
   @include vp-767 {
     margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, 270px);
   }
 }
 
@@ -60,6 +66,9 @@
 
   &:hover,
   &:focus-within {
+    height: 386px;
+    overflow: scroll;
+
     .upcoming-cruises__cruise-description {
       display: flex;
       flex-direction: column;

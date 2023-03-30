@@ -275,6 +275,7 @@
       background-color: $color-default-white;
       color: $color-default-black;
 
+
       &--hidden {
         transition: 0.4s;
         transform: translate(calc(100% + 36px));
@@ -284,7 +285,7 @@
         transform: translate(-100%);
       }
 
-      &::after {
+      .main-header__mobile-overlay {
         position: absolute;
         content: "";
         width: 36px;
@@ -316,6 +317,9 @@
       align-items: unset;
       gap: 12px;
       text-align: left;
+      overflow-y: scroll;
+      height: 100%;
+      max-height: 100vh;
     }
 
     .main-header__nav-link {

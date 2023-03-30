@@ -1380,7 +1380,7 @@ button,
         -ms-transform: translate(-100%);
             transform: translate(-100%);
   }
-  .main-header--mobile-with-js-open .main-header__first-line::after {
+  .main-header--mobile-with-js-open .main-header__first-line .main-header__mobile-overlay {
     position: absolute;
     content: "";
     width: 36px;
@@ -1412,6 +1412,9 @@ button,
             align-items: unset;
     gap: 12px;
     text-align: left;
+    overflow-y: scroll;
+    height: 100%;
+    max-height: 100vh;
   }
   .main-header--mobile-with-js-open .main-header__nav-link {
     padding-left: 10px;
@@ -1781,30 +1784,6 @@ button,
   padding: 30px 30px 38px;
   background-color: #f9fbfd;
 }
-.advantages__item--mod1 p {
-  max-width: 288px;
-}
-.advantages__item--mod2 p {
-  max-width: 280px;
-}
-.advantages__item--mod3 p {
-  max-width: 280px;
-}
-@media (max-width: 1023px) {
-  .advantages__item--mod3 p {
-    margin-top: 20px;
-  }
-}
-@media (max-width: 767px) {
-  .advantages__item--mod3 p {
-    margin-top: unset;
-  }
-}
-@media (max-width: 767px) {
-  .advantages__item--mod1 p, .advantages__item--mod2 p, .advantages__item--mod3 p {
-    max-width: unset;
-  }
-}
 @media (max-width: 1023px) {
   .advantages__item {
     padding: 26px 15px 16px 20px;
@@ -1900,16 +1879,25 @@ button,
   list-style-type: none;
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, 260px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
   gap: 30px;
   color: #f9fbfd;
 }
+@media (max-width: 1023px) {
+  .upcoming-cruises__list {
+    grid-template-columns: repeat(auto-fit, 309px);
+  }
+}
 @media (max-width: 767px) {
   .upcoming-cruises__list {
     margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, 270px);
   }
 }
 
@@ -1936,6 +1924,10 @@ button,
 }
 .upcoming-cruises__item:active {
   opacity: 1;
+}
+.upcoming-cruises__item:hover, .upcoming-cruises__item:focus-within {
+  height: 386px;
+  overflow: scroll;
 }
 .upcoming-cruises__item:hover .upcoming-cruises__cruise-description, .upcoming-cruises__item:focus-within .upcoming-cruises__cruise-description {
   display: -webkit-box;
@@ -2427,6 +2419,9 @@ button,
   max-width: 500px;
   margin-left: auto;
   margin-top: -18px;
+  display: -ms-grid;
+  display: grid;
+  justify-items: start;
 }
 @media (max-width: 1023px) {
   .contacts__contacts {
@@ -2442,19 +2437,18 @@ button,
   }
 }
 .contacts__contacts h3 {
-  margin-bottom: 32px;
+  margin-bottom: 11px;
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
 }
 @media (max-width: 1023px) {
   .contacts__contacts h3 {
-    margin-bottom: 26px;
+    margin-bottom: 7px;
   }
 }
 .contacts__contacts a {
   margin-top: 21px;
-  display: block;
   padding-left: 28px;
   font-size: 16px;
   line-height: 150%;
@@ -2472,6 +2466,11 @@ button,
 .contacts__contacts a:active {
   opacity: 0.3;
 }
+@media (max-width: 767px) {
+  .contacts__contacts a {
+    margin-top: 20px;
+  }
+}
 
 .contacts__link::before {
   position: absolute;
@@ -2486,6 +2485,11 @@ button,
 @media (max-width: 1023px) {
   .contacts__link::before {
     top: 4px;
+  }
+}
+@media (max-width: 767px) {
+  .contacts__link::before {
+    top: 3px;
   }
 }
 .contacts__link--address::before {
