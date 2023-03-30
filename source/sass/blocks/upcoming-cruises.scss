@@ -61,12 +61,12 @@
   grid-template-columns: 1fr;
   justify-content: stretch;
   gap: 0;
+  height: 386px;
 
   @include behavior(1, 1);
 
   &:hover,
   &:focus-within {
-    height: 386px;
     overflow: scroll;
 
     .upcoming-cruises__cruise-description {

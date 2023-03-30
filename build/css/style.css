@@ -1913,6 +1913,7 @@ button,
       -ms-flex-pack: stretch;
           justify-content: stretch;
   gap: 0;
+  height: 386px;
 }
 .upcoming-cruises__item:hover {
   opacity: 1;
@@ -1926,7 +1927,6 @@ button,
   opacity: 1;
 }
 .upcoming-cruises__item:hover, .upcoming-cruises__item:focus-within {
-  height: 386px;
   overflow: scroll;
 }
 .upcoming-cruises__item:hover .upcoming-cruises__cruise-description, .upcoming-cruises__item:focus-within .upcoming-cruises__cruise-description {
