@@ -49,46 +49,90 @@
 
   @include vp-767 {
     margin-top: 30px;
-    grid-template-columns: repeat(auto-fit, 270px);
+    grid-template-columns: 1fr;
   }
 }
 
 .upcoming-cruises__item {
   position: relative;
-  min-height: 386px;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: stretch;
-  gap: 0;
   height: 386px;
-  background-color: $color-arctic-blue;
+  overflow: hidden;
+  background-color: $color-default-black;
 
   @include behavior(1, 1);
 
+  @include vp-767 {
+    height: auto;
+    min-height: 386px;
+  }
+
   &:hover,
   &:focus-within {
-    overflow: auto;
-
-    .upcoming-cruises__cruise-description {
-      display: flex;
-      flex-direction: column;
-      justify-content: end;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 80px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $color-default-black;
       z-index: 1;
     }
 
-    h3 {
-      align-self: stretch;
-      padding: 30px 25px;
-      padding-bottom: 1px;
-      background-color: $color-default-black;
+    .upcoming-cruises__button {
+      display: flex;
+      position: absolute;
+      bottom: 34px;
+      left: 25px;
+      right: 25px;
+      z-index: 1;
 
       @include vp-1023 {
-        padding: 29px 35px 1px;
+        left: 35px;
+        right: 35px;
       }
 
       @include vp-767 {
-        padding: 29px 25px 1px;
+        left: 25px;
+        right: 25px;
+      }
+    }
+
+    .upcoming-cruises__text {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 80px;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: auto;
+      background-color: $color-default-black;
+    }
+
+    .upcoming-cruises__cruise-description {
+      display: block;
+    }
+
+    h3 {
+      position: relative;
+      width: unset;
+      height: unset;
+      display: unset;
+      padding: 28px 25px;
+      padding-bottom: 2px;
+
+      @include vp-1023 {
+        padding: 28px 35px;
+        padding-bottom: 2px;
+      }
+
+      @include vp-767 {
+        padding: 28px 25px;
+        padding-bottom: 2px;
       }
     }
   }
@@ -100,8 +144,11 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
-  align-self: end;
-  z-index: 3;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: end;
 
   @include vp-1023 {
     padding: 27px 35px;
@@ -132,21 +179,19 @@
 
 .upcoming-cruises__cruise-description {
   display: none;
-  padding: 0 25px 35px;
-  background-color: $color-default-black;
+  padding: 0 25px 0;
 
   @include vp-1023 {
-    padding: 0 35px 35px;
+    padding: 0 35px 0;
   }
 
   @include vp-767 {
-    padding: 0 25px 35px;
+    padding: 0 25px 0;
   }
 }
 
 .upcoming-cruises__button {
-  margin-top: 24px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   min-height: 40px;
@@ -161,21 +206,8 @@
   @include behavior;
 }
 
-.upcoming-cruises__background-color {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 140, 255, 0.7);
-}
-
 .upcoming-cruises__img {
-  min-height: 100%;
   width: 100%;
+  min-height: 386px;
   object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
 }
